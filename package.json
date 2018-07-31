@@ -1,0 +1,29 @@
+{
+  "name": "angular-commit-message",
+  "version": "0.1.0",
+  "description": "Create git commit messages in angular js convention model",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "commit": "./bin/commit.js"
+  },
+  "keywords": [
+    "angularjs",
+    "commit",
+    "git",
+    "convention",
+    "model"
+  ],
+  "author": {
+    "name": "Marc Vongerichten",
+    "email": "marc.vongerichten@gmail.com",
+    "url": "https://github.com/ma-vo"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.16.0",
+    "inquirer": "^6.0.0",
+    "node-emoji": "^1.8.1",
+    "shelljs": "^0.8.2"
+  }
+}

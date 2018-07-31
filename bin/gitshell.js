@@ -31,7 +31,7 @@ const questions = [
     {
         type: 'input',
         name: 'ticket',
-        message: 'Enter a JIRA-Ticket Code this commit applies to. (f.e. "JIRA-123")'
+        message: 'Enter a JIRA-Ticket-Code. (f.e. "JIRA-123") Leave empty if there is no code.'
     },
     {
         type: 'input',

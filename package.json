@@ -1,11 +1,11 @@
 {
-  "name": "mgit",
-  "version": "1.0.1",
+  "name": "@mavo/gitshell",
+  "version": "1.0.0",
   "description": "Write a commit message which is concurring with the AngulerJS git commit message convention",
-  "main": "./bin/mgit.js",
+  "main": "./bin/gitshell.js",
   "preferGlobal": true,
   "bin": {
-    "commit": "./bin/mgit.js"
+    "commit": "./bin/gitshell.js"
   },
   "keywords": [
     "angularjs",

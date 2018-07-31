@@ -23,7 +23,8 @@
   "dependencies": {
     "commander": "^2.16.0",
     "inquirer": "^6.0.0",
-    "node-emoji": "^1.8.1",
+    "node-notifier": "^5.2.1",
+    "path": "^0.12.7",
     "shelljs": "^0.8.2"
   }
 }

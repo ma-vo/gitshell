@@ -1,10 +1,11 @@
 #!/usr/bin/env node
+
 const commander = require('commander');
 const {prompt} = require('inquirer'); // require inquirerjs library
-const {addCommitMsg} = require('../index'); // require self-defined functions
+const {addCommitMsg} = require('../commit'); // require self-defined functions
 
 commander
-    .version('0.1.0')
+    .version('1.0.0')
     .description('Write a commit message which is concurring with the AngulerJS git commit message convention');
 
 const questions = [
@@ -29,6 +30,11 @@ const questions = [
     },
     {
         type: 'input',
+        name: 'ticket',
+        message: 'Enter a JIRA-Ticket Code this commit applies to. (f.e. "JIRA-123")'
+    },
+    {
+        type: 'input',
         name: 'subject',
         message: 'Enter a full description in imperative ( “change” not “changed” ). Small first letter. No dot at the end.'
     }
@@ -36,7 +42,7 @@ const questions = [
 
 commander
     .command('commit') // No need of specifying arguments here
-    .alias('c')
+    .alias('m')
     .description('Write a commit message which is concurring with the AngulerJS git commit message convention')
     .action(() => {
         prompt(questions)

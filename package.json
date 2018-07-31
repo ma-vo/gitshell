@@ -1,11 +1,11 @@
 {
-  "name": "angular-commit-message",
-  "version": "0.1.0",
-  "description": "Create git commit messages in angular js convention model",
-  "main": "index.js",
+  "name": "mgit",
+  "version": "1.0.0",
+  "description": "Write a commit message which is concurring with the AngulerJS git commit message convention",
+  "main": "./bin/mgit.js",
   "preferGlobal": true,
   "bin": {
-    "commit": "./bin/commit.js"
+    "commit": "./bin/mgit.js"
   },
   "keywords": [
     "angularjs",

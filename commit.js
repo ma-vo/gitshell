@@ -14,7 +14,7 @@ const addCommitMsg = (commit) => {
         shell.exit(1);
     }
 
-    const commitMessage = `${filterTypeMsg(commit.type)}(${commit.scope}${commit.ticket ? ':' + commit.ticket}) ${commit.subject}`;
+    const commitMessage = `${filterTypeMsg(commit.type)}(${commit.scope}${commit.ticket ? ':' + commit.ticket : ''}) ${commit.subject}`;
 
     shell.exec(`git commit -m "${commitMessage}"`);
     notificationOk(commitMessage);

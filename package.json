@@ -1,6 +1,6 @@
 {
   "name": "@mavo/gitshell",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Write a commit message which is concurring with the AngulerJS git commit message convention",
   "main": "./bin/gitshell.js",
   "preferGlobal": true,

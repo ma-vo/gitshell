@@ -41,7 +41,7 @@ const questions = [
 ];
 
 commander
-    .command('commit') // No need of specifying arguments here
+    .command('commit')
     .alias('m')
     .description('Write a commit message which is concurring with the AngulerJS git commit message convention')
     .action(() => {

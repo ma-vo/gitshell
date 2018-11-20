@@ -40,6 +40,14 @@ try module out
 node ./bin/gitshell.js m
 ```
 
+update package on npm
+https://docs.npmjs.com/updating-your-published-package-version-number
+```bash
+npm version <update_type>
+npm publish
+```
+<update_type> = patch, major, or minor
+
 ---
 
 Format of the commit message

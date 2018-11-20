@@ -9,8 +9,7 @@ const path = require('path');
 const addCommitMsg = (commit) => {
     if (!shell.which('git')) {
         const errorMsg = 'Sorry, this script requires git';
-        shell.echo(errorMsg);
-        notificationError(errorMsg);
+        errorHandler(errorMsg);
         shell.exit(1);
     }
 
@@ -21,8 +20,7 @@ const addCommitMsg = (commit) => {
         notificationOk(commitMessage);  
     } else {
         const errorMsg = 'Sorry, an error occured.';
-        shell.echo(`${errorMsg} Look above for more details.`);
-        notificationError(`${errorMsg} Look in console for more details.`);
+        errorHandler(errorMsg);
     }
 };
 
@@ -63,5 +61,14 @@ const notificationError = (msg) =>
             wait: false // Do not wait for user action
         }
     );
+
+/**
+ * @function  [errorHandler]
+ * @description simplifies error handling
+ */
+const errorHandler = (errorMsg) => {
+    shell.echo(`${errorMsg} Look above for more details.`);
+    notificationError(`${errorMsg} Look in console for more details.`);
+}
 
 module.exports = { addCommitMsg };

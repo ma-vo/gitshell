@@ -33,6 +33,13 @@ cd /usr/local/lib/node_modules/@mavo/gitshell
 npm link
 ```
 
+How to develop
+-----------------------
+try module out
+```bash
+node ./bin/gitshell.js m
+```
+
 ---
 
 Format of the commit message

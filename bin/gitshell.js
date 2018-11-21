@@ -5,7 +5,8 @@ const {prompt} = require('inquirer'); // require inquirerjs library
 const {addCommitMsg} = require('../commit'); // require self-defined functions
 
 commander
-    .version('1.0.0')
+    .version('1.1.0')
+    .option('-m, --commit', 'create commit message')
     .description('Write a commit message which is concurring with the AngulerJS git commit message convention');
 
 const questions = [

@@ -17,6 +17,8 @@
 ## Todos
 
 * add possibility to have gitshell not installed globally, but as project dependency
-* reuse your ticket-number from the latest commits
+* ~~reuse your ticket-number from the latest commits~~
+* reuse your scope from the latest commits
 * ~~add validation~~
 * use ticket number from branch name?
+* push functionality?

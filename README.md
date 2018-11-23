@@ -1,5 +1,10 @@
-Gitshell
-==========================
+# Gitshell
+
+offers a easy-to-use shell-command to create valid commit messages which are following AngularJS commit conventions
+
+* build commit message
+* enhance commit speed by providing latest used ticket-numbers from a storage
+
 These rules are adopted from [the AngularJS commit conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/).
 
 * [Goal](#goal)
@@ -12,54 +17,61 @@ These rules are adopted from [the AngularJS commit conventions](https://docs.goo
     * [`<subject>` text](#subject-text)
 * [Examples](#examples)
 
-Goal
------
+## Goal
+
 * enhace git commiting syntax in teams or organizations
 
-Requierments
------
+## Requierments
+
 * [node](https://nodejs.org/en/) >= v6.4
 
-How to install
------------------------
+## How to install
+
 install gitshell
+
 ```bash
 npm i -g @mavo/gitshell
 ```
 
-change directory to gitshell and create symlinks
+change directory to global node_modules/gitshell and create symlinks
+
 ```bash
 cd /usr/local/lib/node_modules/@mavo/gitshell
 npm link
 ```
 
-How to develop
------------------------
-try module out
+## How to develop
+
+try out module
+
 ```bash
 node ./bin/gitshell.js m
 ```
 
 update package on npm
-https://docs.npmjs.com/updating-your-published-package-version-number
+[NPM update package](https://docs.npmjs.com/updating-your-published-package-version-number)
+
 ```bash
 npm version <update_type>
 npm publish
 ```
+
 <update_type> = patch, major, or minor
 
 ---
 
-Format of the commit message
-----------------------------
-```
+## Format of the commit message
+
+```text
 <type>(<scope>:<ticket>) <subject>
 ```
 
-### Subject line        
+### Subject line
+
 Subject line contains succinct description of the change.
 
-#### Allowed `<type>`
+### Allowed `<type>`
+
 * feat (feature)
 * fix (bug fix)
 * docs (documentation)
@@ -68,17 +80,19 @@ Subject line contains succinct description of the change.
 * test (when adding missing tests)
 * chore (maintain)
 
-#### Allowed `<scope>`
+### Allowed `<scope>`
+
 Scope could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
 
-#### `<subject>` text
+### `<subject>` text
+
 * use imperative, present tense: “change” not “changed” nor “changes”
 * don't capitalize first letter
 * no dot (.) at the end
 
-Examples
---------
-```
+## Examples
+
+```bash
 feat($browser:JIRA-123) onUrlChange event (popstate/hashchange/polling)
 
 fix($compile:SHC-123) couple of unit tests for IE9

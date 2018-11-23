@@ -90,15 +90,32 @@ const errorHandler = errorMsg => {
  * @param {String} ticket - entered ticket-number
  * @description saves latest used ticket number in a history file
  */
-const saveHistory = (ticket) => {
-    const $history = new Storage(path.join(__dirname + '/../data/history.json'))
+const saveHistory = ticket => {
+	const $history = new Storage(path.join(__dirname + "/../data/history.json"))
+	let latestTickets = $history.get("latestTickets") || []
 
-    let latestTickets = $history.get('latestTickets') || [];
-    if(latestTickets.length >= 2) {
-        latestTickets.pop()
-    }
-    latestTickets.unshift(ticket)
-    $history.put('latestTickets', latestTickets)
+	if (ticket !== "no code to add") {
+		let duplicateTicket = false
+
+		latestTickets.forEach(latestTicket => {
+			if (ticket === latestTicket) {
+                console.log('duplicate content')
+                console.log(latestTicket-1)
+                console.log(latestTickets)
+                latestTickets.splice(latestTicket-1, 1)
+                console.log(latestTickets)
+				duplicateTicket = true
+			}
+		})
+
+		if (!duplicateTicket) {
+			latestTickets.length >= 2
+			latestTickets.pop()
+		}
+
+		latestTickets.unshift(ticket)
+	}
+	$history.put("latestTickets", latestTickets)
 }
 
-module.exports = { executeCommit, saveHistory };
+module.exports = { executeCommit, saveHistory }

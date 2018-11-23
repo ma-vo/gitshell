@@ -95,19 +95,13 @@ const saveHistory = ticket => {
 	let latestTickets = $history.get("latestTickets") || []
 
 	if (ticket !== "no code to add") {
-		let duplicateTicket = false
-
-		latestTickets.forEach(latestTicket => {
-			if (ticket === latestTicket) {
-                latestTickets.splice(latestTicket-1, 1)
-				duplicateTicket = true
+		latestTickets.forEach((el, index) => {
+			if (ticket === latestTickets[index]) {
+				latestTickets.splice(index, 1)
 			}
 		})
 
-		if (!duplicateTicket) {
-			latestTickets.length >= 2
-			latestTickets.pop()
-		}
+		if (latestTickets.length >= 3) latestTickets.pop()
 
 		latestTickets.unshift(ticket)
 	}

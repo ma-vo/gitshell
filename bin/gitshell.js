@@ -9,7 +9,7 @@ const {executeCommit, saveHistory} = require('../src/scripts/commit'); // requir
 
 const $history = new Storage(path.join(__dirname + '/../src/data/history.json'))
 const $type = require(path.join(__dirname + '/../src/data/type.json'));
-const $latestTickets = $history.get('latestTickets')
+const $latestTickets = $history.get('latestTickets') || []
 
 // register additional prompt plugin for inquirer
 prompt.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));

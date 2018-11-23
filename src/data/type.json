@@ -1,0 +1,9 @@
+[
+    "feat (feature)",
+    "fix (bugfix)",
+    "docs (documentation)",
+    "style (formatting, missing semi colons, …)",
+    "refactor (restructure code parts)",
+    "test (adding tests)",
+    "chore (maintain)"
+]

@@ -53,7 +53,7 @@ npm publish
 Format of the commit message
 ----------------------------
 ```
-<type>(<scope>:<ticket>): <subject>
+<type>(<scope>:<ticket>) <subject>
 ```
 
 ### Subject line        

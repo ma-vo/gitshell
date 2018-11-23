@@ -99,11 +99,7 @@ const saveHistory = ticket => {
 
 		latestTickets.forEach(latestTicket => {
 			if (ticket === latestTicket) {
-                console.log('duplicate content')
-                console.log(latestTicket-1)
-                console.log(latestTickets)
                 latestTickets.splice(latestTicket-1, 1)
-                console.log(latestTickets)
 				duplicateTicket = true
 			}
 		})
